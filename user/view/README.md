@@ -1,10 +1,10 @@
-# hello
-## apple
+# user
+## view
 
-This challenge is named `apple`, and is located within module `hello`.
+This challenge is named `view`, and is located within module `user`.
 
 When users start this challenge, their environment will have:
 - `/flag`
-- `/challenge/apple`
+- `/challenge/view`
 
-`/flag` is read-only by root, and `/challenge/apple` is setuid root.
+`/flag` is read-only by root, and `/challenge/view` starts the irc server.
