@@ -1,6 +1,6 @@
-id: example
+id: irc
 name: IRC Permissions Dojo
-type: example
+type: hidden
 award:
   emoji: 😀
 modules:
