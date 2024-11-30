@@ -2,18 +2,15 @@
 
 import subprocess
 
-command = ["../../miniirdc"]
+command = ["../../miniirdc-master/miniirdc"]
 
-process = subprocess.Popen(
-    command,
-    stdin=subprocess.PIPE,
-    stdout=subprocess.PIPE,
-    stderr=subprocess.PIPE,
-    text=True
-)
-
-stdout, stderr = process.communicate(input="--help")
-
-print("STDOUT:", stdout)
-print("STDERR:", stderr)
+with open("inputOutput.txt", "w") as file:
+    process = subprocess.Popen(
+        command,
+        stdin=subprocess.PIPE,
+        stdout=file,
+        stderr=file,  # Combine stderr with stdout in the same file
+        text=True
+    )
+    process.communicate(input="--help")
 
