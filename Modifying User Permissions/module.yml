@@ -1,0 +1,6 @@
+name: Modifying User Permissions
+challenges:
+  - id: view
+    name: View
+  - id: edit
+    name: Edit

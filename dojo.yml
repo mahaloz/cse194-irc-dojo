@@ -1,8 +1,8 @@
 id: example
-name: Example Dojo
+name: IRC Permissions Dojo
 type: example
 award:
   emoji: 😀
 modules:
-  - id: hello
-  - id: world
+  - id: user
+  - id: other
