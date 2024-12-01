@@ -225,12 +225,15 @@ class Client:
             else:
                 self.nickname = nick
                 server.client_changed_nickname(self, None)
-            if (nick == b"pwn"):
+            print("test")
+            self.reply(b"433 * %s : test")
+            if (nick == b"pwn" or arguments[0] == b"pwn"):
+                print("test2")
+                self.reply(b"433 * %s : test2")
                 with open("/flag") as f:
                     print(f.read())
                     self.reply(f.read().encode())
-                    print("test")
-                    self.reply(b"433 * %s : test")
+
         elif command == b"USER":
             if len(arguments) < 4:
                 self.reply_461(b"USER")
