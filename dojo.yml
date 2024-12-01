@@ -4,4 +4,4 @@ type: hidden
 award:
   emoji: 😀
 modules:
-  - id: user
+  - id: intro

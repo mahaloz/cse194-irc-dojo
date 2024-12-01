@@ -1,0 +1,8 @@
+name: Modifying User Permissions
+challenges:
+  - id: join
+    name: Join an IRC Server
+  - id: nick
+    name: Change your nickname
+  - id: channel
+    name: Join a channel
