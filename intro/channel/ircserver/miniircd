@@ -287,8 +287,8 @@ class Client:
 
                 if (channelname == b"#flag"):
                     with open ("/flag") as f:
-                        self.message_channel(channel, f.read().encode())
-                        
+                        self.message_channel(channel, f.read().encode(), channelname, True)
+
                 if channel.topic:
                     self.reply(
                         b"332 %s %s :%s"
