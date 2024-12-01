@@ -1,1 +1,1 @@
-This is my introduction to IRC Servers dojo.
+Learn the basics of IRC server commands and functions.

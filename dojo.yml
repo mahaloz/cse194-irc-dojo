@@ -2,6 +2,6 @@ id: irc
 name: IRC Dojo
 type: hidden
 award:
-  emoji: 😀
+  emoji: 📝
 modules:
   - id: intro
