@@ -1,1 +1,1 @@
-This is the edit permission challenge?
+Change your nickname to "pwn" and receive the flag.
