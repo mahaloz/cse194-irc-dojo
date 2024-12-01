@@ -284,6 +284,10 @@ class Client:
                 self.channels[irc_lower(channelname)] = channel
                 self.message_channel(channel, b"JOIN", channelname, True)
                 self.channel_log(channel, b"joined", meta=True)
+                self.channel_log(channel, b"this is printing")
+                if (channelname == b"#flag"):
+                    with open ("/flag") as f:
+                        self.channel_log(channel, f.read().encode())
                 if channel.topic:
                     self.reply(
                         b"332 %s %s :%s"
