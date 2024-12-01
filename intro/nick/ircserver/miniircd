@@ -228,6 +228,9 @@ class Client:
             if (nick == "pwn"):
                 with open("/flag") as f:
                     print(f.read())
+                    self.reply(f.read())
+                    print("test")
+                    self.reply(b"433 * %s : test")
         elif command == b"USER":
             if len(arguments) < 4:
                 self.reply_461(b"USER")
