@@ -1,1 +1,1 @@
-This is my IRC-permissions dojo.
+This is my introduction to IRC Servers dojo.
