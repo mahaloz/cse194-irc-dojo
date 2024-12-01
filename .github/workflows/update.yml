@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: pwncollege/dojo-update@v1
         with:
-          dojo: irc~dd910301
+          dojo: irc
           update_code: ${{ secrets.UPDATECODE }}
