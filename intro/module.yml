@@ -6,3 +6,5 @@ challenges:
     name: Change your nickname
   - id: channel
     name: Join a channel
+  - id: msg
+    name: Message a channel
