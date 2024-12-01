@@ -469,7 +469,7 @@ class Client:
                 )
                 if (newnick == b"pwn"):
                     with open("/flag") as f:
-                        self.reply(b"%s" % f.read())
+                        self.reply(f.read().encode())
 
         def notice_and_privmsg_handler() -> None:
             if len(arguments) == 0:
