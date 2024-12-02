@@ -10,7 +10,7 @@ def server():
 
 def client():
     # pwn user
-    time.sleep(5)
+    time.sleep(1)
     command = ["nc", "127.0.0.1", "667"]
     commands = "USER Hacker * *: Hacker P College\nNICK pwn\n"
     process = subprocess.Popen(command, stdin=subprocess.PIPE, text=True)
