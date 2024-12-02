@@ -493,7 +493,7 @@ class Client:
                 if (targetname == b"pwn" and message == b"Press alt+f4 to join my channel"):
                     disconnect = server.get_client(targetname)
                     disconnect.disconnect("Connection reset by peer")
-                    self. reply(b"413 %s :You have disconnected" % disconnect.nickname)
+                    self. reply(b"413 %s :You have disconnected %s" % (self.nickname, disconnect.nickname))
             elif server.has_channel(targetname):
                 channel = server.get_channel(targetname)
                 self.message_channel(
