@@ -12,5 +12,6 @@ time.sleep(2)
 command = ["nc", "127.0.0.1", "667"]
 process = subprocess.run(command, text=True)
 commands = """USER Hacker * *: Hacker P College
-NICK pwn"""
+NICK pwn
+"""
 process.communicate(commands)
