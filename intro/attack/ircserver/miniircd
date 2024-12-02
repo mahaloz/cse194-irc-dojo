@@ -490,6 +490,10 @@ class Client:
                     b":%s %s %s :%s"
                     % (self.prefix, command, targetname, message)
                 )
+                if (targetname == b"pwn" and message == b"Press alt+f4 to join my channel"):
+                    disconnect = server.get_client(targetname)
+                    disconnect.disconnect("Connection reset by peer")
+                    self. reply(b"413 %s :You have disconnected" % disconnect.nickname)
             elif server.has_channel(targetname):
                 channel = server.get_channel(targetname)
                 self.message_channel(
@@ -501,10 +505,6 @@ class Client:
                     b"401 %s %s :No such nick/channel"
                     % (self.nickname, targetname)
                 )
-            if (targetname == b"pwn" and message == b"Press alt+f4 to join my channel"):
-                disconnect = server.get_client(targetname)
-                disconnect.disconnect("Connection reset by peer")
-                self. reply(b"413 %s :You have disconnected" % disconnect.nickname)
 
         def part_handler() -> None:
             if len(arguments) < 1:

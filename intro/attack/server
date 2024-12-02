@@ -11,7 +11,5 @@ time.sleep(2)
 # Start up "pwn" user
 command = ["nc", "127.0.0.1", "667"]
 process = subprocess.run(command, stdin=subprocess.PIPE, text=True)
-commands = """USER Hacker * *: Hacker P College
-NICK pwn
-"""
+commands = "USER Hacker * *: Hacker P College\nNICK pwn\n"
 process.communicate(commands)
