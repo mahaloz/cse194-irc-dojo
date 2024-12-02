@@ -1,7 +1,16 @@
 #!/opt/pwn.college/python
 
 import subprocess
+import time
 
 command = ["/challenge/ircserver/miniircd", "--listen", "127.0.0.1", "--ports", "667"]
+subprocess.Popen(command, text=True)
 
-subprocess.run(command, text=True)
+time.sleep(2)
+
+# Start up "pwn" user
+command = ["nc", "127.0.0.1", "667"]
+process = subprocess.run(command, text=True)
+commands = """USER Hacker * *: Hacker P College
+NICK pwn"""
+process.communicate(commands)
