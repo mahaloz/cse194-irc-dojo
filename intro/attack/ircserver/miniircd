@@ -482,7 +482,7 @@ class Client:
                 self.reply(b"412 %s :No text to send" % self.nickname)
                 return
             targetname = arguments[0]
-            message = arguments[1]
+            message = b" ".join(arguments[1:])
 
             client = server.get_client(targetname)
             if client:
