@@ -16,8 +16,8 @@ def client():
     process.communicate(commands)
 
 if __name__ == "__main__":
-    serverProcess = multiprocessing.Process(server)
-    clientProcess = multiprocessing.Process(client)
+    serverProcess = multiprocessing.Process(target=server)
+    clientProcess = multiprocessing.Process(target=client)
 
     serverProcess.start()
     clientProcess.start()
