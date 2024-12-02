@@ -2,9 +2,13 @@ name: Introduction to IRC Servers
 challenges:
   - id: join
     name: Join an IRC Server
+  - id: join2
+    name: Join an IRC Server (with an IRC Client)
   - id: nick
     name: Change your nickname
   - id: channel
     name: Join a channel
   - id: msg
     name: Message a channel
+  - id: attack
+    name: Remove another user
