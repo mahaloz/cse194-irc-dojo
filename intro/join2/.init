@@ -6,9 +6,9 @@ import pathlib
 dir = pathlib.Path(__file__).parent
 
 with open(dir / "thisworks.txt", "w") as f:
-    f.write("flag \n")
+    f.write(f"{dir}\n")
 
-commands = ["cd " + dir / "sic-1.3", "sudo make", "sudo make install"]
+commands = ["cd sic-1.3", "sudo make", "sudo make install"]
 
 for command in commands:
     try:
