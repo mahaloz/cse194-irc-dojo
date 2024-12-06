@@ -1,1 +1,1 @@
-Successfully connect to an IRC server using WeeChat (IRC Client). Make sure to use the GUI Desktop.
+Successfully connect to an IRC server using an IRC client (Hint: sic --help).
