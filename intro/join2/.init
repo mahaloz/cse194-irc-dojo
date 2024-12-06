@@ -1,14 +1,17 @@
 #!/opt/pwn.college/python
 
 import subprocess
+import pathlib
 
-with open("/home/hacker/challenge/thisworks.txt", "w") as file:
+dir = pathlib.Path(__file__).parent
+
+with open(dir / "thisworks.txt", "w") as file:
     file.write("flag")
 
 with open("/home/hacker/thisworks.txt", "w") as file:
     file.write("flag")
 
-command = ["cd", "/challenge/sic-1.3/"]
+command = ["cd", dir  / "sic-1.3/"]
 subprocess.run(command, text=True)
 
 command = ["sudo", "make"]
