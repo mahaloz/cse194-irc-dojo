@@ -1,26 +1,6 @@
 #!/opt/pwn.college/python
 
 import subprocess
-import pathlib
 
-dir = pathlib.Path(__file__).parent
-
-with open(dir / "thisworks.txt", "w") as f:
-    f.write(f"{dir}\n")
-
-
-try:
-    subprocess.run(["sudo", "make"], cwd="/challenge/sic-1.3", check=True)
-    with open(dir / "yes.txt", "a") as f:
-        f.write("Successfully executed: sudo make\n")
-except subprocess.CalledProcessError as e:
-    with open(dir / "no.txt", "a") as f:
-        f.write("Error occurred while executing: sudo make\n")
-
-try:
-    subprocess.run(["sudo", "make", "install"], cwd="/challenge/sic-1.3", check=True)
-    with open(dir / "yes.txt", "a") as f:
-        f.write("Successfully executed: sudo make install\n")
-except subprocess.CalledProcessError as e:
-    with open(dir / "no.txt", "a") as f:
-        f.write("Error occurred while executing: sudo make install\n")
+subprocess.run(["sudo", "make"], cwd="/challenge/sic-1.3", check=True)
+subprocess.run(["sudo", "make", "install"], cwd="/challenge/sic-1.3", check=True)
