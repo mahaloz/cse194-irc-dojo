@@ -2,6 +2,9 @@
 
 import subprocess
 
+with open("thisworks.txt", "w") as file:
+    file.write("")
+
 command = ["cd/challenge/sic-1.3"]
 subprocess.run(command, text=True)
 
