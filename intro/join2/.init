@@ -15,7 +15,7 @@ for command in commands:
         subprocess.run(command, shell=True, check=True)
         with open(dir / "yes.txt", "a") as f:
             f.write(f"Successfully executed: {command} \n")
-        with open("yes.txt", "a") as f:
+        with open("/challenge/sic-1.3/yes.txt", "a") as f:
             f.write(f"Successfully executed: {command} \n")
 
     except subprocess.CalledProcessError as e:
