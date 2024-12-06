@@ -5,17 +5,7 @@ import pathlib
 
 dir = pathlib.Path(__file__).parent
 
-with open(dir / "thisworks.txt", "w") as file:
-    file.write("flag")
+commands = ["cd " + dir / "sic-1.3", "sudo make", "sudo make install"]
 
-with open("/home/hacker/thisworks.txt", "w") as file:
-    file.write("flag")
-
-command = ["cd", dir  / "sic-1.3"]
-subprocess.run(command, text=True)
-
-command = ["sudo", "make"]
-subprocess.run(command, text=True)
-
-command = ["sudo", "make", "install"]
-subprocess.run(command, text=True)
+for command in commands:
+    subprocess.run(command, shell=True, check=True)
