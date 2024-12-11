@@ -12,3 +12,28 @@ challenges:
     name: Message a channel
   - id: attack
     name: Remove another user
+resources:
+  - name: "IRC Servers"
+    type: lecture
+    video: ppp73znsldE
+    playlist: PLisuK3zAF889i36aqRR1O-n8o9BNnpppa
+  - name: "IRC Clients"
+    type: lecture
+    video: bYJiOUYYcTc
+    playlist: PLisuK3zAF889i36aqRR1O-n8o9BNnpppa
+  - name: "Nicknames"
+    type: lecture
+    video: FimdFWeKYyM
+    playlist: PLisuK3zAF889i36aqRR1O-n8o9BNnpppa
+  - name: "Channels"
+    type: lecture
+    video: IsmbAklCiI4
+    playlist: PLisuK3zAF889i36aqRR1O-n8o9BNnpppa
+  - name: "Private Messages"
+    type: lecture
+    video: vPyeCbrNuBM
+    playlist: PLisuK3zAF889i36aqRR1O-n8o9BNnpppa
+  - name: "Vulnerabilities"
+    type: lecture
+    video: dhBF26XCn3c
+    playlist: PLisuK3zAF889i36aqRR1O-n8o9BNnpppa
